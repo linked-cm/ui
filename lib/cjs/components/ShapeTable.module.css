@@ -1,0 +1,394 @@
+.action {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.filterButton {
+  justify-content: flex-start !important;
+  width: fit-content !important;
+}
+
+.tableWrapper {
+  display: flex;
+  flex-direction: column;
+
+  .deleteDataButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+    width: auto;
+    border-radius: 0;
+    padding: none;
+    --ld-button-filled-primary-background-color: #eb3223;
+    --ld-button-filled-primary-hover-background-color: #eb3223;
+    --ld-button-filled-primary-border-color: none;
+    --ld-button-filled-primary-font-color: rgb(255, 255, 255);
+  }
+
+  .tableBar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    border-top: 1px solid #d6d6d6;
+    border-bottom: 1px solid #d6d6d6;
+    padding: 15px 0;
+    /*   height: 200px;*/
+
+    .filterBar {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      width: 85%;
+      height: 100%;
+      /* flex: 1;*/
+    }
+  }
+}
+
+.actionTableButton {
+  --ld-button-filled-primary-background-color: transparent;
+  --ld-button-filled-primary-hover-background-color: transparent;
+  --ld-button-filled-primary-border-color: none;
+  --ld-button-filled-primary-font-color: black;
+}
+
+.pagination {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 15px;
+  margin: 10px 0;
+
+  .pageInfo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 5px;
+
+    .goToPageForm {
+      box-shadow: none;
+      width: 80px;
+      border: 1px solid var(--ld-input-placeholder);
+      --ld-input-border-radius: 5px;
+    }
+  }
+
+  .selectPageRows {
+    position: relative;
+    width: 120px; /* Adjust width as needed */
+    padding: 11px 10px;
+    border-radius: 5px;
+    appearance: none; /* Remove default arrow appearance */
+    -webkit-appearance: none; /* Remove default arrow appearance for Safari */
+    -moz-appearance: none; /* Remove default arrow appearance for Firefox */
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>')
+      no-repeat;
+    background-position: right 3px center; /* Adjust right position to move arrow left */
+    background-size: 30px 30px;
+    border: 1px solid var(--ld-input-placeholder);
+    background-color: white; /* Adjust as needed */
+    cursor: pointer;
+  }
+}
+
+.paginationButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border-radius: 5px;
+  --ld-button-border-radius: 5px;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tableContainer {
+  width: 100%; /* Adjust as needed */
+  max-height: 450px; /* Set the height you need */
+  overflow: auto;
+}
+
+.table {
+  width: 100%;
+  table-layout: auto;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.th,
+.td {
+  border-bottom: 1px solid #d6d6d6;
+  /* vertical-align: middle;*/
+  padding: 8px; /* Adjust padding as needed */
+  white-space: nowrap; /* Prevents text wrapping, ensuring the content fits in the cell */
+  /* display: flex;*/
+  /* flex-direction: row;*/
+  /* align-items: center;*/
+  /* justify-content: center;*/
+}
+
+thead th {
+  position: sticky;
+  top: 0;
+}
+
+.tbodyContainer {
+  display: block;
+  max-height: 350px; /* Adjust as needed */
+  overflow-y: auto;
+}
+
+.tbodyContainer tbody {
+  display: block;
+}
+
+.tbodyContainer tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.tbodyContainer td {
+  display: table-cell;
+}
+
+.th:first-child {
+  z-index: 1;
+}
+
+.th:last-child {
+  z-index: 1;
+}
+
+.th:first-child,
+.td:first-child {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.th:last-child,
+.td:last-child {
+  width: 120px;
+}
+
+/* .th:first-child,*/
+/* .td:first-child {*/
+/*     width: 50px;*/
+/* }*/
+
+.th {
+  text-align: left;
+  background-color: #ffffff;
+  cursor: pointer;
+
+  .canSort {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+  }
+}
+.tr {
+  background-color: #f7f7f7;
+  height: 40px;
+}
+
+.sticky {
+  position: -webkit-sticky; /* For Safari */
+  position: sticky;
+  background: white; /* Or the background color of your table */
+  /* z-index: 1; /* Ensure it stays above other content */
+}
+
+.stickyLeft {
+  left: 0;
+}
+
+.stickyRight {
+  right: 0;
+}
+
+.modalContainer {
+  right: 0;
+  min-height: 100vh;
+  background-color: #ffffff;
+  z-index: 1;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  --dialog-animation-name: none;
+  --dialog-position-left: auto;
+  --dialog-transform: translate(0, -50%);
+  --dialog-width: 300px;
+  --ld-border-radius: 5px;
+}
+
+.modalHeader {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+
+  h1 {
+    font-size: 25px;
+    font-weight: 500;
+  }
+}
+
+.modalHeader h2 {
+  margin: 0;
+}
+
+.modalBody {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 20px;
+
+  img {
+    width: 80%;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+
+    .formSection {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+
+      p {
+        text-align: center;
+      }
+
+      .formFilter {
+        border: 1px solid var(--ld-input-placeholder);
+        --ld-input-border-radius: 5px;
+      }
+    }
+
+    .filter {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      button {
+        padding: 8px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+        width: 100%;
+      }
+    }
+    /* justify-content: center;*/
+
+    /* .input {*/
+    /*   width: 100%;*/
+    /* }*/
+  }
+}
+
+.modalFooter {
+  display: flex;
+  text-align: right;
+}
+
+.buttonFilter {
+  width: 100%;
+}
+
+.modalFooter button {
+  padding: 8px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.modalFooter button:hover {
+  background-color: #0056b3;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  background-color: transparent;
+  color: #007bff; /* Text color*/
+  border: 1px solid #007bff;
+  padding: 4px 8px;
+  border-radius: 5px;
+  font-size: 14px;
+  padding: 10px 12px;
+  /* margin-right: 8px;*/
+
+  .badgeText {
+    margin-right: 4px;
+  }
+
+  .badgeCloseButton {
+    border: none;
+    background: none;
+    color: inherit;
+    font-size: inherit;
+    cursor: pointer;
+    margin-left: 4px;
+
+    &:hover {
+      color: #ff0000; /* Change color on hover*/
+    }
+  }
+}
+
+/* Hide the default checkbox */
+input[type='checkbox'] {
+  position: relative;
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  background-color: #eee;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Custom checkmark */
+input[type='checkbox']:after {
+  content: '';
+  position: absolute;
+  display: none;
+  left: 7px;
+  top: 2px;
+  width: 6px;
+  height: 12px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+/* Show the checkmark when checked */
+input[type='checkbox']:checked {
+  background-color: #4caf50;
+  border-color: #4caf50;
+}
+
+input[type='checkbox']:checked:after {
+  display: block;
+}
+
+/* Hover effect */
+input[type='checkbox']:hover {
+  background-color: #ccc;
+}

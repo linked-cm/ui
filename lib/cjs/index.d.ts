@@ -1,0 +1,10 @@
+import './ontologies/lincd-ui.js';
+import './components/TextfieldEditor.js';
+import './components/RadioButtonEditor.js';
+import './components/TextareaEditor.js';
+import './components/DateEditor.js';
+import './components/SwitchEditor.js';
+import './components/CheckboxEditor.js';
+import './components/ToggleEditor.js';
+import './components/SelectEditor.js';
+import './components/AvatarEditor.js';
